@@ -7,8 +7,8 @@ export const Logo = ({ className }: { className?: string }) => {
       <Image 
         src="/logo.png" 
         alt="NEXT2YOU Care" 
-        width={140} 
-        height={40} 
+        width={110} 
+        height={32} 
         className="object-contain"
         priority
       />
