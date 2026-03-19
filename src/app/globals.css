@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #166534;
+  --color-primary: #14C774;
   --color-primary-foreground: #ffffff;
-  --color-accent: #4ade80;
-  --color-accent-foreground: #166534;
+  --color-accent: #26D885;
+  --color-accent-foreground: #000000;
   
   --color-background: #ffffff;
   --color-foreground: #111827;
@@ -14,7 +14,7 @@
   
   --color-border: #e5e7eb;
   --color-input: #e5e7eb;
-  --color-ring: #166534;
+  --color-ring: #14C774;
 
   --radius-3xl: 1.5rem;
   --radius-full: 9999px;
