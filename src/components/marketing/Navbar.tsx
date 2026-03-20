@@ -42,7 +42,7 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 mx-auto w-full max-w-7xl px-4 pt-4 transition-transform duration-300",
+        "fixed top-0 left-0 right-0 z-50 mx-auto w-full container px-6 pt-4 transition-transform duration-300",
         isVisible ? "translate-y-0" : "-translate-y-full"
       )}
     >
