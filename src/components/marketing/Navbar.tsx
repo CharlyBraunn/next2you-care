@@ -17,16 +17,41 @@ export const Navbar = () => {
 
   useEffect(() => {
     let lastScrollY = window.scrollY
+    let observer: IntersectionObserver | null = null
 
-    // Initial check for hero presence and scroll position
-    const heroSection = document.getElementById('hero')
-    if (heroSection) {
-      const rect = heroSection.getBoundingClientRect()
-      // If hero is in viewport and we haven't scrolled past it
-      setIsOverHero(rect.bottom > 80) 
-    } else {
-      setIsOverHero(false)
+    // Reset visibility on navigation
+    setIsVisible(true)
+
+    const setupObserver = () => {
+      const heroSection = document.getElementById('hero')
+      
+      // Update initial state based on current hero presence and scroll
+      if (heroSection) {
+        const rect = heroSection.getBoundingClientRect()
+        // If hero is in viewport and we haven't scrolled past it (80px header margin)
+        setIsOverHero(rect.top < 80 && rect.bottom > 80)
+      } else {
+        setIsOverHero(false)
+      }
+
+      // Observer to detect if we are over the Hero section
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsOverHero(entry.isIntersecting)
+        },
+        { 
+          threshold: 0,
+          rootMargin: "-80px 0px 0px 0px" // Account for header height
+        }
+      )
+
+      if (heroSection) {
+        observer.observe(heroSection)
+      }
     }
+
+    // Small delay to ensure the new page's DOM (#hero) is rendered
+    const timeoutId = setTimeout(setupObserver, 50)
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY
@@ -39,25 +64,11 @@ export const Navbar = () => {
       lastScrollY = currentScrollY
     }
 
-    // Observer to detect if we are over the Hero section
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsOverHero(entry.isIntersecting)
-      },
-      { 
-        threshold: 0,
-        rootMargin: "-80px 0px 0px 0px" // Account for header height
-      }
-    )
-
-    if (heroSection) {
-      observer.observe(heroSection)
-    }
-
     window.addEventListener("scroll", handleScroll)
     return () => {
+      clearTimeout(timeoutId)
       window.removeEventListener("scroll", handleScroll)
-      if (heroSection) observer.unobserve(heroSection)
+      if (observer) observer.disconnect()
     }
   }, [pathname])
 
@@ -97,12 +108,15 @@ export const Navbar = () => {
             )}>
               Connexion
             </Link>
-            <Button className={cn(
-              "hidden md:inline-flex rounded-full px-6 font-bold transition-all hover:scale-105 active:scale-95",
-              isOverHero && !isMobileMenuOpen 
-                ? "bg-white text-primary hover:bg-white/90 border-transparent shadow-none" 
-                : "bg-[#14C774] text-white hover:bg-[#26D885] border-transparent shadow-md"
-            )} asChild>
+            <Button 
+              className={cn(
+                "hidden md:inline-flex rounded-full px-6 font-bold transition-all hover:scale-105 active:scale-95 border-none",
+                isOverHero && !isMobileMenuOpen 
+                  ? "bg-white text-primary hover:bg-white/90 shadow-none text-brand-green" 
+                  : "bg-[#14C774] text-white hover:bg-[#26D885] shadow-md"
+              )} 
+              asChild
+            >
               <Link href="/signup">Démarrer</Link>
             </Button>
             <Button
