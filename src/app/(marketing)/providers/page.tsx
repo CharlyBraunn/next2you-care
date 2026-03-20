@@ -5,17 +5,18 @@ import { Wallet, Calendar, Map, CheckCircle } from "lucide-react"
 export default function ProvidersPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-primary/5">
-        <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight">
+      <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#14532D] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#26D885_0,transparent_50%)] opacity-20"></div>
+        <div className="container mx-auto px-6 max-w-4xl text-center space-y-6 relative z-10">
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
             Générez de l&apos;argent sur<br />
-            <span className="text-primary italic">votre temps libre.</span>
+            <span className="text-[#26D885] italic">votre temps libre.</span>
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             Nettoyez des véhicules d&apos;autopartage près de chez vous. Pas de patron, pas d&apos;horaires fixes. Inscription 100% gratuite.
           </p>
-          <div className="pt-4 flex justify-center gap-4">
-            <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-accent text-accent-foreground hover:bg-accent/90" asChild>
+          <div className="pt-8 flex justify-center">
+            <Button size="lg" className="h-14 px-10 text-lg rounded-full bg-[#14C774] text-white hover:bg-[#26D885] border-none shadow-[0_0_30px_rgba(20,199,116,0.3)]" asChild>
               <Link href="/signup">Devenir Prestataire</Link>
             </Button>
           </div>

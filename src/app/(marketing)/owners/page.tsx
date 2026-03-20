@@ -6,21 +6,21 @@ import { Shield, CheckCircle } from "lucide-react"
 export default function OwnersPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-muted/30">
-        <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight">
+      <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#064E3B] text-white">
+        <div className="container mx-auto px-6 max-w-4xl text-center space-y-6 relative z-10">
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
             Développez votre flotte.<br />
-            <span className="text-primary italic">On nettoie le reste.</span>
+            <span className="text-[#26D885] italic">On nettoie le reste.</span>
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             Passez de 1 à 10 véhicules sans sacrifier vos soirées. NEXT2YOU Care connecte vos véhicules à des préparateurs fiables pour relouer en un éclair.
           </p>
-          <div className="pt-4 flex justify-center gap-4">
-            <Button size="lg" className="h-14 px-8 text-lg rounded-full" asChild>
+          <div className="pt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-[#14C774] text-white hover:bg-[#26D885] border-none shadow-[0_0_30px_rgba(20,199,116,0.3)]" asChild>
               <Link href="/signup">Essayer gratuitement</Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full" asChild>
-              <Link href="/pricing">Voir la tarification (dès 9€/mois)</Link>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-white/20 hover:bg-white/10 text-white bg-transparent" asChild>
+              <Link href="/pricing">Voir la tarification</Link>
             </Button>
           </div>
         </div>
