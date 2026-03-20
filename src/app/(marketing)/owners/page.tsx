@@ -1,13 +1,12 @@
-/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/Card"
-import { Shield, BarChart3, Users, MapPin, Building2, ClipboardCheck, Clock, CheckCircle } from "lucide-react"
+import { Card } from "@/components/ui/Card"
+import { Shield, CheckCircle } from "lucide-react"
 
 export default function OwnersPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="py-20 bg-muted/30">
+      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-muted/30">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight">
             Développez votre flotte.<br />

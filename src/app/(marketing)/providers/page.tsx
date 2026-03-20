@@ -1,13 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
-import { Card } from "@/components/ui/Card"
-import { Wallet, Calendar, Map, TrendingUp, Handshake, CheckCircle } from "lucide-react"
+import { Wallet, Calendar, Map, CheckCircle } from "lucide-react"
 
 export default function ProvidersPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="py-20 bg-primary/5">
+      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-primary/5">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight">
             Générez de l&apos;argent sur<br />

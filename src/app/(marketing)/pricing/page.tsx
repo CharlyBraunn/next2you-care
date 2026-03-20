@@ -64,7 +64,7 @@ export default function PricingPage() {
 
   return (
     <div className="flex flex-col w-full">
-      <section className="py-20 lg:py-32 bg-muted/30">
+      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-muted/30">
         <div className="container mx-auto px-6 text-center max-w-3xl space-y-6">
           <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
             Un abonnement <span className="text-primary italic">adapté à votre activité</span>.

@@ -47,8 +47,8 @@ export const Navbar = () => {
       )}
     >
       <div className={cn(
-        "flex h-20 items-center justify-between px-8 rounded-full transition-all duration-300 backdrop-blur-md border relative z-50",
-        isTop && !isMobileMenuOpen ? "bg-white/80 border-transparent shadow-sm" : "bg-white/95 border-gray-200/50 shadow-md"
+        "flex h-20 items-center justify-between px-8 rounded-full transition-all duration-300 border relative z-50",
+        isTop && !isMobileMenuOpen ? "bg-white border-transparent shadow-sm" : "bg-white border-gray-200/50 shadow-md"
       )}>
         <Link href="/">
           <Logo variant="green" />
