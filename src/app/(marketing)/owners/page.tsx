@@ -1,40 +1,65 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/Card"
-import { Shield, BarChart3, Users, MapPin, Building2, ClipboardCheck, Clock } from "lucide-react"
+import { Shield, BarChart3, Users, MapPin, Building2, ClipboardCheck, Clock, CheckCircle } from "lucide-react"
 
 export default function OwnersPage() {
   return (
     <div className="flex flex-col w-full">
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">Pour les <span className="text-primary italic">loueurs en autopartage</span></h1>
-          <p className="text-xl text-muted-foreground">Que vous ayez 1 véhicule sur Getaround / Turo ou une flotte de 50 véhicules. Ne perdez plus votre temps à les nettoyer, confiez-les à des pros.</p>
-          <Button size="lg" asChild>
-            <Link href="/signup">Démarrer maintenant</Link>
-          </Button>
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight">
+            Développez votre flotte.<br />
+            <span className="text-primary italic">On nettoie le reste.</span>
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Passez de 1 à 10 véhicules sans sacrifier vos soirées. NEXT2YOU Care connecte vos véhicules à des préparateurs fiables pour relouer en un éclair.
+          </p>
+          <div className="pt-4 flex justify-center gap-4">
+            <Button size="lg" className="h-14 px-8 text-lg rounded-full" asChild>
+              <Link href="/signup">Essayer gratuitement</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full" asChild>
+              <Link href="/pricing">Voir la tarification (dès 9€/mois)</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="py-20">
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { icon: ClipboardCheck, title: "Mission Standard à 25€", desc: "Le minimum essentiel (nettoyage intérieur rapide, remise en état basique, photos) pour remettre un véhicule prêt à louer." },
-            { icon: Users, title: "Prestataires Fiables", desc: "Fini la difficulté de trouver quelqu'un de confiance. Notre réseau d'experts locaux est systématiquement vérifié." },
-            { icon: Clock, title: "Gagnez du Temps", text: "Entretenir un véhicule entre deux locations est contraignant. Déléguez cette tâche et concentrez-vous sur votre croissance." },
-            { icon: Shield, title: "Preuves Photo Incluses", desc: "Chaque mission comprend une inspection visuelle simple et des photos pour garantir l'état du véhicule." },
-            { icon: MapPin, title: "Options Flexibles", desc: "Ajoutez seulement ce dont vous avez besoin : Urgence (+5€), Gestion carburant (+5€), Rapatriement, etc." },
-            { icon: BarChart3, title: "Abonnements Adaptés", desc: "De 9€ à 39€/mois selon la taille de votre flotte. Un coût marginal par rapport aux gains générés." },
-          ].map((feature, i) => (
-            <Card key={i} className="border-none shadow-none bg-muted/50 p-8 rounded-3xl space-y-4">
-              <div className="bg-primary/10 p-3 rounded-2xl w-fit text-primary">
-                <feature.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{feature.desc}</p>
-            </Card>
-          ))}
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+            <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=1600&auto=format&fit=crop" alt="Fleet owner relaxing" className="w-full h-full object-cover" />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold">Un week-end sauvé pour le prix d&apos;un Fast Food.</h2>
+              <p className="text-xl text-muted-foreground">La mission standard coûte <span className="text-foreground font-bold">25€</span>. Ce montant inclut un nettoyage rapide, une remise au propre et des photos de preuve de l&apos;état. Vous évitez les déplacements, le matériel, et la fatigue.</p>
+              <ul className="space-y-4 pt-4">
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6" /> Plus de perte de temps entre deux locations.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6" /> Des véhicules toujours bien notés sur Getaround/Turo.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6" /> Concentrez-vous sur l&apos;achat de nouveaux véhicules.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center flex-col-reverse lg:flex-row-reverse">
+            <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1449426468159-d96dbf144412?q=80&w=1600&auto=format&fit=crop" alt="Keys to success" className="w-full h-full object-cover" />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold">Zéro stress, tout est tracé.</h2>
+              <p className="text-xl text-muted-foreground">Notre application vous notifie à chaque étape. Vous disposez d&apos;une <span className="text-foreground font-bold">preuve photo certifiée</span> avant et après l&apos;intervention du prestataire.</p>
+              <ul className="space-y-4 pt-4">
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6" /> Inspection visuelle simple incluse.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6" /> Options d&apos;urgence et gestion du carburant.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6" /> Déclarez vos sinistres sereinement.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </section>
 
       {/* CTA Section */}

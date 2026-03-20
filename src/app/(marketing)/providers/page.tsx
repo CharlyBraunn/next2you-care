@@ -1,40 +1,62 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
-import { Wallet, Calendar, Map, CheckCircle, Handshake, TrendingUp } from "lucide-react"
+import { Wallet, Calendar, Map, TrendingUp, Handshake, CheckCircle } from "lucide-react"
 
 export default function ProvidersPage() {
   return (
     <div className="flex flex-col w-full">
       <section className="py-20 bg-primary/5">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">Générez un <span className="text-primary italic">complément de revenu</span></h1>
-          <p className="text-xl text-muted-foreground">Des missions simples, sans engagement, adaptées à votre emploi du temps. Inscription 100% gratuite.</p>
-          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
-            <Link href="/signup">Devenir prestataire</Link>
-          </Button>
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight">
+            Générez de l&apos;argent sur<br />
+            <span className="text-primary italic">votre temps libre.</span>
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Nettoyez des véhicules d&apos;autopartage près de chez vous. Pas de patron, pas d&apos;horaires fixes. Inscription 100% gratuite.
+          </p>
+          <div className="pt-4 flex justify-center gap-4">
+            <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-accent text-accent-foreground hover:bg-accent/90" asChild>
+              <Link href="/signup">Devenir Prestataire</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="py-20">
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { icon: Wallet, title: "Commission Fixe et Faible", desc: "Seulement 2€ de commission par mission. Vous conservez l'essentiel de vos revenus sur chaque prestation." },
-            { icon: Calendar, title: "Liberté et Flexibilité", desc: "C'est un complément de revenu parfait. Travaillez quand vous voulez, sans engagement ni minimum." },
-            { icon: CheckCircle, title: "Missions Simples", desc: "Des interventions claires et rapides (nettoyage intérieur, photos, vérification). Pas de mauvaises surprises." },
-            { icon: Map, title: "Proche de chez vous", desc: "Recevez les offres des loueurs professionnels et particuliers (Getaround/Turo) autour de vous." },
-            { icon: TrendingUp, title: "Revenus Réguliers", desc: "La forte rotation des véhicules en autopartage vous garantit un volume constant d'opportunités." },
-            { icon: Handshake, title: "Gagnant-Gagnant", desc: "En devenant un prestataire fiable, les loueurs feront appel à vous en priorité sur le long terme." },
-          ].map((item, i) => (
-            <div key={i} className="p-8 space-y-4 hover:bg-muted/50 rounded-3xl transition-colors">
-              <div className="bg-accent/20 p-3 rounded-2xl w-fit text-accent-foreground">
-                <item.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+            <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1600&auto=format&fit=crop" alt="Cleaner smiling" className="w-full h-full object-cover" />
             </div>
-          ))}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold">Vous gardez quasiment tout.</h2>
+              <p className="text-xl text-muted-foreground">Nous prélevons une <span className="text-foreground font-bold">commission fixe de 2€</span> par mission, et c&apos;est tout. Le reste est pour vous. Pourquoi ? Parce que votre travail a de la valeur, et nous le respectons.</p>
+              <ul className="space-y-4 pt-4">
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-accent w-6 h-6" /> Rémunération juste et transparente.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-accent w-6 h-6" /> Paiements rapides et garantis.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-accent w-6 h-6" /> Aucuns frais d&apos;abonnement.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center flex-col-reverse lg:flex-row-reverse">
+            <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1542382103-62c47c729577?q=80&w=1600&auto=format&fit=crop" alt="App showing map" className="w-full h-full object-cover" />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold">Ne travaillez que quand vous le décidez.</h2>
+              <p className="text-xl text-muted-foreground">Ouvrez l&apos;application, repérez les véhicules à préparer autour de vous, acceptez la mission. <span className="text-foreground font-bold">Vos règles, votre rythme.</span></p>
+              <ul className="space-y-4 pt-4">
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-accent w-6 h-6" /> Missions claires : nettoyage simple et photos.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-accent w-6 h-6" /> Interventions près de chez vous ou sur votre trajet.</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-accent w-6 h-6" /> Notez les loueurs et construisez votre réputation.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </section>
 
       <section className="py-20 bg-foreground text-background">
