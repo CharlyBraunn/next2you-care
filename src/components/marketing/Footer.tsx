@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2 space-y-6">
-            <Logo className="invert brightness-0" />
+            <Logo variant="white" />
             <p className="text-muted-foreground max-w-xs">
               La plateforme premium de préparation et nettoyage automobile pour les professionnels de la mobilité.
             </p>

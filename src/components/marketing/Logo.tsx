@@ -1,11 +1,18 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
-export const Logo = ({ className }: { className?: string }) => {
+interface LogoProps {
+  className?: string;
+  variant?: "green" | "white";
+}
+
+export const Logo = ({ className, variant = "green" }: LogoProps) => {
+  const imgSrc = variant === "white" ? "/logo-white.png" : "/logo-green.png";
+  
   return (
     <div className={cn("flex items-center", className)}>
       <Image 
-        src="/logo.png" 
+        src={imgSrc} 
         alt="NEXT2YOU Care" 
         width={60} 
         height={60} 
