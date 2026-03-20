@@ -6,7 +6,7 @@ import { Shield, CheckCircle } from "lucide-react"
 export default function OwnersPage() {
   return (
     <div className="flex flex-col w-full">
-      <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#064E3B] text-white">
+      <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#0A2E1A] text-white">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6 relative z-10">
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
             Développez votre flotte.<br />

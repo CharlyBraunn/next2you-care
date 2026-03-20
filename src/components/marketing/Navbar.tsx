@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { Logo } from "./Logo"
@@ -12,8 +13,20 @@ export const Navbar = () => {
   const [isOverHero, setIsOverHero] = useState(true)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  const pathname = usePathname()
+
   useEffect(() => {
     let lastScrollY = window.scrollY
+
+    // Initial check for hero presence and scroll position
+    const heroSection = document.getElementById('hero')
+    if (heroSection) {
+      const rect = heroSection.getBoundingClientRect()
+      // If hero is in viewport and we haven't scrolled past it
+      setIsOverHero(rect.bottom > 80) 
+    } else {
+      setIsOverHero(false)
+    }
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY
@@ -31,10 +44,12 @@ export const Navbar = () => {
       ([entry]) => {
         setIsOverHero(entry.isIntersecting)
       },
-      { threshold: 0.1 } // Trigger when 10% of the Hero is visible
+      { 
+        threshold: 0,
+        rootMargin: "-80px 0px 0px 0px" // Account for header height
+      }
     )
 
-    const heroSection = document.getElementById('hero')
     if (heroSection) {
       observer.observe(heroSection)
     }
@@ -44,7 +59,7 @@ export const Navbar = () => {
       window.removeEventListener("scroll", handleScroll)
       if (heroSection) observer.unobserve(heroSection)
     }
-  }, [])
+  }, [pathname])
 
   return (
     <header 
@@ -84,7 +99,9 @@ export const Navbar = () => {
             </Link>
             <Button className={cn(
               "hidden md:inline-flex rounded-full px-6 font-bold transition-all hover:scale-105 active:scale-95",
-              isOverHero && !isMobileMenuOpen ? "bg-white text-primary hover:bg-white/90" : ""
+              isOverHero && !isMobileMenuOpen 
+                ? "bg-white text-primary hover:bg-white/90 border-transparent shadow-none" 
+                : "bg-[#14C774] text-white hover:bg-[#26D885] border-transparent shadow-md"
             )} asChild>
               <Link href="/signup">Démarrer</Link>
             </Button>

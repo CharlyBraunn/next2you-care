@@ -5,7 +5,7 @@ import { Wallet, Calendar, Map, CheckCircle } from "lucide-react"
 export default function ProvidersPage() {
   return (
     <div className="flex flex-col w-full">
-      <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#14532D] text-white overflow-hidden">
+      <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#0A2E1A] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#26D885_0,transparent_50%)] opacity-20"></div>
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6 relative z-10">
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
