@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card"
-import { HelpCircle, ChevronRight } from "lucide-react"
+import { HelpCircle } from "lucide-react"
 
 export default function FAQPage() {
   const faqs = [

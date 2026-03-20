@@ -24,7 +24,7 @@ export default function AuthLayout({
         <div className="space-y-6 relative z-10">
           <h2 className="text-4xl font-bold font-serif leading-tight">La plateforme qui redéfinit l&apos;entretien de votre flotte.</h2>
           <p className="text-xl text-primary-foreground/80 max-w-lg">
-            "Depuis que nous utilisons NEXT2YOU Care, nous avons réduit notre temps de préparation de 40%."
+            &quot;Depuis que nous utilisons NEXT2YOU Care, nous avons réduit notre temps de préparation de 40%.&quot;
           </p>
           <div className="flex items-center gap-4">
              <div className="w-12 h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-bold">MK</div>

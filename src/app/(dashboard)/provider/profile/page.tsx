@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card"
+import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
-import { ShieldCheck, MapPin, Wrench, CheckCircle2, Star, User } from "lucide-react"
+import { ShieldCheck, MapPin, CheckCircle2, Star, User } from "lucide-react"
 
 export default function ProviderProfilePage() {
   return (

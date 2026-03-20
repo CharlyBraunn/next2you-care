@@ -55,9 +55,8 @@ export const Navbar = () => {
         </Link>
         
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/owners" className="text-gray-600 hover:text-primary transition-colors">Pour les loueurs</Link>
-          <Link href="/providers" className="text-gray-600 hover:text-primary transition-colors">Pour les prestataires</Link>
-          <Link href="/pricing" className="text-gray-600 hover:text-primary transition-colors">Tarifs</Link>
+          <Link href="/owners" className="text-gray-600 hover:text-primary transition-colors">Je suis loueur</Link>
+          <Link href="/providers" className="text-gray-600 hover:text-primary transition-colors">Je suis prestataire</Link>
         </nav>
         
         <div className="flex items-center gap-4">
@@ -83,9 +82,8 @@ export const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-0 left-0 right-0 bg-white/95 backdrop-blur-md border border-gray-200/50 shadow-xl rounded-b-3xl pt-28 pb-8 px-6 md:hidden animate-in slide-in-from-top-5 duration-200">
           <nav className="flex flex-col gap-6 text-lg font-medium text-center">
-            <Link href="/owners" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-primary transition-colors">Pour les loueurs</Link>
-            <Link href="/providers" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-primary transition-colors">Pour les prestataires</Link>
-            <Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-primary transition-colors">Tarifs</Link>
+            <Link href="/owners" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-primary transition-colors">Je suis loueur</Link>
+            <Link href="/providers" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-primary transition-colors">Je suis prestataire</Link>
             <div className="w-full h-px bg-border my-2"></div>
             <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-primary transition-colors">Connexion</Link>
             <Button className="rounded-full w-full" asChild onClick={() => setIsMobileMenuOpen(false)}>

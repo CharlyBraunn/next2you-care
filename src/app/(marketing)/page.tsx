@@ -18,7 +18,7 @@ export default function LandingPage() {
           </h1>
           
           <p className="mt-8 text-xl text-white/80 leading-relaxed max-w-2xl text-balance">
-            La plateforme spécialisée. Développez l&apos;activité de votre flotte sans vous épuiser, ou générez des revenus sur votre temps libre en devenant préparateur.
+            Développez l&apos;activité de votre flotte sans vous épuiser, ou générez des revenus sur votre temps libre en devenant préparateur NEXT2YOU.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10 w-full sm:w-auto">
@@ -37,7 +37,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold tracking-tight">Une solution pensée pour vous.</h2>
-            <p className="text-xl text-muted-foreground mt-4">Choisissez votre profil pour découvrir vos avantages.</p>
+            <p className="text-xl text-muted-foreground mt-4">Découvrez vos avantages.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -47,12 +47,12 @@ export default function LandingPage() {
                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                  <ShieldCheck className="w-10 h-10 text-primary" />
                </div>
-               <h3 className="text-3xl font-bold mb-4">Pour les Loueurs</h3>
+               <h3 className="text-3xl font-bold mb-4">Loueur</h3>
                <p className="text-muted-foreground text-lg mb-8 text-balance">
-                 Ne perdez plus votre temps entre deux locations. Déléguez la préparation de vos véhicules à des experts fiables et concentrez-vous sur la rentabilité.
+                 Ne perdez plus votre temps entre vos locations. Déléguez la préparation de vos véhicules à des experts et concentrez-vous sur votre développement.
                </p>
                <Button variant="outline" className="mt-auto rounded-full px-8 h-12 text-base font-semibold group-hover:bg-primary group-hover:text-white transition-colors" asChild>
-                 <Link href="/owners">Découvrir les avantages</Link>
+                 <Link href="/owners">C&apos;est parti</Link>
                </Button>
             </div>
             
@@ -62,12 +62,12 @@ export default function LandingPage() {
                <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
                  <Zap className="w-10 h-10 text-accent" />
                </div>
-               <h3 className="text-3xl font-bold mb-4">Pour les Prestataires</h3>
+               <h3 className="text-3xl font-bold mb-4">Préparateur</h3>
                <p className="text-white/70 text-lg mb-8 text-balance">
                  Générez des revenus sur votre temps libre en préparant des véhicules près de chez vous. Vos règles, votre rythme, en toute simplicité.
                </p>
                <Button className="mt-auto rounded-full px-8 h-12 text-base font-semibold bg-accent text-accent-foreground hover:bg-accent/90 transition-colors" asChild>
-                 <Link href="/providers">Voir comment ça marche</Link>
+                 <Link href="/providers">Je m&apos;inscris</Link>
                </Button>
             </div>
           </div>

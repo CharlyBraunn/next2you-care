@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card"
+import { Card } from "@/components/ui/Card"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 
 export default function ContactPage() {
