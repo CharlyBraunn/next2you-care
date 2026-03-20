@@ -42,13 +42,13 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 mx-auto w-full max-w-7xl px-6 pt-4 transition-transform duration-300",
-        isVisible ? "translate-y-0" : "-translate-y-full"
+        "fixed top-0 left-0 right-0 z-50 mx-auto w-full max-w-7xl px-6 pt-4",
+        "translate-y-0"
       )}
     >
       <div className={cn(
-        "flex h-20 items-center justify-between px-8 rounded-full transition-all duration-300 border relative z-50 backdrop-blur-lg",
-        isTop && !isMobileMenuOpen ? "bg-white/70 border-transparent shadow-sm" : "bg-white/70 border-gray-200/50 shadow-md"
+        "flex h-20 items-center justify-between px-8 rounded-full transition-all duration-300 border relative z-50 backdrop-blur-xl",
+        isTop && !isMobileMenuOpen ? "bg-white/30 border-transparent shadow-sm" : "bg-white/40 border-gray-200/10 shadow-lg"
       )}>
         <Link href="/">
           <Logo variant="green" />
