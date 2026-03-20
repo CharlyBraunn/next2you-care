@@ -6,7 +6,7 @@ export default function LandingPage() {
   return (
     <div className="flex flex-col w-full min-h-[calc(100vh-80px)]">
       {/* Transverse Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#0A2E1A] text-white">
+      <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#0A2E1A] text-white">
         <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white mb-8 backdrop-blur-md">
             <span className="flex h-2 w-2 rounded-full bg-[#26D885] animate-ping"></span>

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 
 export const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true)
-  const [isTop, setIsTop] = useState(true)
+  const [isOverHero, setIsOverHero] = useState(true)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -17,62 +17,74 @@ export const Navbar = () => {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-
-      // Hide/Show logic
+      // Hide on scroll down, show on scroll up
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false)
       } else {
         setIsVisible(true)
       }
-
-      // Top/Scrolled logic
-      if (currentScrollY > 50) {
-        setIsTop(false)
-      } else {
-        setIsTop(true)
-      }
-
       lastScrollY = currentScrollY
     }
 
+    // Observer to detect if we are over the Hero section
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsOverHero(entry.isIntersecting)
+      },
+      { threshold: 0.1 } // Trigger when 10% of the Hero is visible
+    )
+
+    const heroSection = document.getElementById('hero')
+    if (heroSection) {
+      observer.observe(heroSection)
+    }
+
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      if (heroSection) observer.unobserve(heroSection)
+    }
   }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-      <div className="mx-auto max-w-7xl px-6 pt-4 pointer-events-auto">
+    <header 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out",
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      )}
+    >
+      <div className="mx-auto max-w-7xl px-6 pt-4">
         <div className={cn(
           "flex h-20 items-center justify-between px-8 rounded-full transition-all duration-300 border relative z-50 backdrop-blur-2xl",
-          isTop && !isMobileMenuOpen
+          isOverHero && !isMobileMenuOpen
             ? "bg-white/10 border-white/10 shadow-none text-white"
             : "bg-white/60 border-gray-200/20 shadow-lg text-gray-900"
         )}>
-          <Link href="/" className="transition-transform hover:scale-105">
-            <Logo variant={isTop && !isMobileMenuOpen ? "white" : "green"} />
+          <Link href="/" className="transition-transform hover:scale-105 shrink-0">
+            <Logo variant={isOverHero && !isMobileMenuOpen ? "white" : "green"} />
           </Link>
           
           <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
             <Link href="/owners" className={cn(
               "transition-colors",
-              isTop && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-600 hover:text-primary"
+              isOverHero && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-600 hover:text-primary"
             )}>Je suis loueur</Link>
             <Link href="/providers" className={cn(
               "transition-colors",
-              isTop && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-600 hover:text-primary"
+              isOverHero && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-600 hover:text-primary"
             )}>Je suis prestataire</Link>
           </nav>
           
           <div className="flex items-center gap-6">
             <Link href="/login" className={cn(
               "hidden sm:block text-sm font-semibold transition-colors",
-              isTop && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-700 hover:text-primary"
+              isOverHero && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-700 hover:text-primary"
             )}>
               Connexion
             </Link>
             <Button className={cn(
               "hidden md:inline-flex rounded-full px-6 font-bold transition-all hover:scale-105 active:scale-95",
-              isTop && !isMobileMenuOpen ? "bg-white text-primary hover:bg-white/90" : ""
+              isOverHero && !isMobileMenuOpen ? "bg-white text-primary hover:bg-white/90" : ""
             )} asChild>
               <Link href="/signup">Démarrer</Link>
             </Button>
@@ -81,7 +93,7 @@ export const Navbar = () => {
               size="icon"
               className={cn(
                 "md:hidden",
-                isTop && !isMobileMenuOpen ? "text-white" : "text-gray-800"
+                isOverHero && !isMobileMenuOpen ? "text-white" : "text-gray-800"
               )}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
