@@ -40,41 +40,55 @@ export const Navbar = () => {
   }, [])
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 mx-auto w-full max-w-7xl px-6 pt-4",
-        "translate-y-0"
-      )}
-    >
-      <div className={cn(
-        "flex h-20 items-center justify-between px-8 rounded-full transition-all duration-300 border relative z-50 backdrop-blur-xl",
-        isTop && !isMobileMenuOpen ? "bg-white/30 border-transparent shadow-sm" : "bg-white/40 border-gray-200/10 shadow-lg"
-      )}>
-        <Link href="/">
-          <Logo variant="green" />
-        </Link>
-        
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/owners" className="text-gray-600 hover:text-primary transition-colors">Je suis loueur</Link>
-          <Link href="/providers" className="text-gray-600 hover:text-primary transition-colors">Je suis prestataire</Link>
-        </nav>
-        
-        <div className="flex items-center gap-4">
-          <Link href="/login" className="hidden sm:block text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-            Connexion
+    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+      <div className="mx-auto max-w-7xl px-6 pt-4 pointer-events-auto">
+        <div className={cn(
+          "flex h-20 items-center justify-between px-8 rounded-full transition-all duration-300 border relative z-50 backdrop-blur-2xl",
+          isTop && !isMobileMenuOpen
+            ? "bg-white/10 border-white/10 shadow-none text-white"
+            : "bg-white/60 border-gray-200/20 shadow-lg text-gray-900"
+        )}>
+          <Link href="/" className="transition-transform hover:scale-105">
+            <Logo variant={isTop && !isMobileMenuOpen ? "white" : "green"} />
           </Link>
-          <Button className="hidden md:inline-flex rounded-full px-6 font-medium transition-colors" asChild>
-            <Link href="/signup">Démarrer</Link>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-gray-800"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            <span className="sr-only">Menu</span>
-          </Button>
+          
+          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
+            <Link href="/owners" className={cn(
+              "transition-colors",
+              isTop && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-600 hover:text-primary"
+            )}>Je suis loueur</Link>
+            <Link href="/providers" className={cn(
+              "transition-colors",
+              isTop && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-600 hover:text-primary"
+            )}>Je suis prestataire</Link>
+          </nav>
+          
+          <div className="flex items-center gap-6">
+            <Link href="/login" className={cn(
+              "hidden sm:block text-sm font-semibold transition-colors",
+              isTop && !isMobileMenuOpen ? "text-white/90 hover:text-white" : "text-gray-700 hover:text-primary"
+            )}>
+              Connexion
+            </Link>
+            <Button className={cn(
+              "hidden md:inline-flex rounded-full px-6 font-bold transition-all hover:scale-105 active:scale-95",
+              isTop && !isMobileMenuOpen ? "bg-white text-primary hover:bg-white/90" : ""
+            )} asChild>
+              <Link href="/signup">Démarrer</Link>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className={cn(
+                "md:hidden",
+                isTop && !isMobileMenuOpen ? "text-white" : "text-gray-800"
+              )}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <span className="sr-only">Menu</span>
+            </Button>
+          </div>
         </div>
       </div>
 
