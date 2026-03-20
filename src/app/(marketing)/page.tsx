@@ -74,24 +74,45 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             
             <div className="space-y-6">
-              <div className="relative aspect-square rounded-3xl overflow-hidden mb-8 shadow-lg">
-                <Image src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1000&auto=format&fit=crop" alt="Car interior dirty" fill className="object-cover" />
+              <div className="relative aspect-square rounded-3xl overflow-hidden mb-8 shadow-lg bg-gradient-to-br from-white to-muted border border-border flex items-center justify-center p-8 group">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-red-500/10 rounded-full blur-3xl group-hover:bg-red-500/20 transition-all duration-700"></div>
+                <div className="relative bg-white p-6 rounded-2xl shadow-xl rotate-[-5deg] group-hover:rotate-0 transition-transform duration-500">
+                  <div className="flex flex-col gap-2">
+                    <div className="w-16 h-2 bg-muted rounded-full"></div>
+                    <div className="w-24 h-2 bg-muted rounded-full"></div>
+                    <div className="w-12 h-2 bg-red-500/20 rounded-full mt-2"></div>
+                  </div>
+                </div>
               </div>
               <h3 className="text-2xl font-bold">1. Ne vous déplacez plus</h3>
               <p className="text-muted-foreground text-lg">Postez une mission en 3 clics sur l&apos;application depuis votre canapé. Notre réseau d&apos;experts locaux est alerté.</p>
             </div>
 
             <div className="space-y-6">
-              <div className="relative aspect-square rounded-3xl overflow-hidden mb-8 shadow-lg">
-                <Image src="https://images.unsplash.com/photo-1621255474343-4dcfea0e6add?q=80&w=1000&auto=format&fit=crop" alt="Person cleaning car" fill className="object-cover" />
+              <div className="relative aspect-square rounded-3xl overflow-hidden mb-8 shadow-lg bg-gradient-to-br from-[#14C774] to-[#26D885] flex items-center justify-center group">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-white/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full blur-3xl"></div>
+                <div className="relative bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-full shadow-2xl scale-95 group-hover:scale-100 transition-transform duration-500">
+                  <ShieldCheck className="w-16 h-16 text-white" strokeWidth={1.5} />
+                </div>
               </div>
               <h3 className="text-2xl font-bold">2. Un pro prend le relais</h3>
               <p className="text-muted-foreground text-lg">Un préparateur vérifié accepte la mission et se rend sur place. Nettoyage, photos de preuve, vérification globale. Tout est tracé.</p>
             </div>
 
             <div className="space-y-6">
-              <div className="relative aspect-square rounded-3xl overflow-hidden mb-8 shadow-lg">
-                <Image src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop" alt="Keys handed over smiling" fill className="object-cover" />
+              <div className="relative aspect-square rounded-3xl overflow-hidden mb-8 shadow-lg bg-[#0F172A] flex items-center justify-center group">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(38,216,133,0.15)_0,transparent_70%)]"></div>
+                <div className="relative bg-[#1E293B] border border-white/5 p-6 rounded-2xl shadow-2xl flex items-center gap-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="bg-[#14C774] rounded-full p-3">
+                    <CheckCircle2 className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <div className="w-20 h-3 bg-white/20 rounded-full mb-2"></div>
+                    <div className="w-12 h-2 bg-white/10 rounded-full"></div>
+                  </div>
+                </div>
               </div>
               <h3 className="text-2xl font-bold">3. Relouez sans temps mort</h3>
               <p className="text-muted-foreground text-lg">Vous recevez la notification. Le véhicule est immaculé. Encaisez votre prochaine location l&apos;esprit tranquille.</p>
