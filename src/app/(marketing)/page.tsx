@@ -11,11 +11,11 @@ export default function LandingPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden bg-muted/30">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 max-w-2xl py-8">
-            <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
-              La préparation <span className="text-primary italic">haute couture</span> de votre flotte.
+            <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
+              La plateforme spécialisée pour trouver <span className="text-primary italic">rapidement</span> un prestataire pour l’entretien de véhicules en autopartage.
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Mettez en relation vos véhicules avec les meilleurs experts locaux du nettoyage et de la remise en état. Simple, rapide, impeccable.
+              Pour les loueurs dès 1 véhicule, flottes organisées et utilisateurs Getaround / Turo. Gagnez du temps grâce à une plateforme simple, réactive qui comprend vos contraintes terrain.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="text-base" asChild>
@@ -34,7 +34,7 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="text-sm text-muted-foreground font-medium">
-                Rejoint par +50 gestionnaires de flotte ce mois-ci
+                Rejoint par +50 loueurs en autopartage ce mois-ci
               </p>
             </div>
           </div>
@@ -59,8 +59,8 @@ export default function LandingPage() {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">
-            <h2 className="text-4xl font-bold tracking-tight">Comment ça marche ?</h2>
-            <p className="text-lg text-muted-foreground">Une plateforme pensée pour le terrain et l&apos;efficacité opérationnelle.</p>
+            <h2 className="text-4xl font-bold tracking-tight">Le problème de la rotation</h2>
+            <p className="text-lg text-muted-foreground">La rotation entre locations est contraignante. Difficile de trouver quelqu’un de fiable pour un besoin ponctuel ou régulier.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -69,10 +69,10 @@ export default function LandingPage() {
               <h3 className="text-2xl font-bold">Pour les Loueurs</h3>
               <ul className="space-y-4">
                 {[
-                  "Publiez une mission en 30 secondes",
-                  "Mise en relation automatique avec les experts locaux",
-                  "Suivi en temps réel avec preuve photo",
-                  "Facturation centralisée et simplifiée"
+                  "Trouvez un prestataire de confiance en quelques minutes",
+                  "Des véhicules toujours prêts sans effort",
+                  "Une solution pensée pour les loueurs en autopartage",
+                  "À partir de 25€, vous déléguez l'essentiel"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
@@ -81,7 +81,7 @@ export default function LandingPage() {
                 ))}
               </ul>
               <Button variant="link" className="p-0 text-primary h-auto" asChild>
-                <Link href="/owners">En savoir plus &rarr;</Link>
+                <Link href="/owners">Découvrir la tarification &rarr;</Link>
               </Button>
             </Card>
 
@@ -90,10 +90,10 @@ export default function LandingPage() {
               <h3 className="text-2xl font-bold">Pour les Prestataires</h3>
               <ul className="space-y-4">
                 {[
-                  "Recevez des missions à proximité",
-                  "Gérez votre planning en toute liberté",
-                  "Paiements garantis et réguliers",
-                  "Outil de suivi métier professionnel"
+                  "Un complément de revenu flexible",
+                  "Des missions simples et rapides",
+                  "Sans aucun engagement",
+                  "Revenus réguliers (faible commission de 2€)"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent" />
@@ -114,18 +114,18 @@ export default function LandingPage() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-1 space-y-6">
-              <h2 className="text-4xl font-bold leading-tight text-white line-clamp-2">L&apos;excellence opérationnelle comme standard.</h2>
-              <p className="text-muted-foreground">Nous transformons la préparation automobile d&apos;une contrainte logistique en un avantage compétitif.</p>
+              <h2 className="text-4xl font-bold leading-tight text-white line-clamp-2">1 heure de votre temps économisée pour 25€.</h2>
+              <p className="text-muted-foreground">Un véhicule prêt en moins de 24h. Un coût maîtrisé, même avec plusieurs véhicules.</p>
               <Button variant="secondary" size="lg" asChild>
-                <Link href="/signup">Essayer gratuitement</Link>
+                <Link href="/pricing">Voir les tarifs en détail</Link>
               </Button>
             </div>
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { icon: Clock, title: "Gain de temps", text: "Réduisez le temps d'immobilisation de vos véhicules entre deux locations." },
-                { icon: ShieldCheck, title: "Qualité Garantie", text: "Des standards de nettoyage professionnels validés par photo à chaque mission." },
-                { icon: Zap, title: "Réactivité", text: "Interventions rapides en cas d'urgence ou de surcroît d'activité." },
-                { icon: Star, title: "Fiabilité", text: "Une communauté de prestataires notés et vérifiés par nos soins." },
+                { icon: Clock, title: "Entretenir prend du temps", text: "Ne perdez plus votre week-end à nettoyer vos véhicules de location, déléguez l'essentiel à un pro." },
+                { icon: ShieldCheck, title: "Confiance & Fiabilité", text: "Nous avons sélectionné des profils fiables et sérieux pour que vous puissiez louer l'esprit tranquille." },
+                { icon: Zap, title: "Toujours Prêt", text: "Des véhicules toujours prêts sans effort, pour enchaîner les locations sans temps mort." },
+                { icon: Star, title: "Budget Maîtrisé", text: "À partir de 25€, ajoutez uniquement ce dont vous avez besoin. Vous gardez le contrôle sur votre budget." },
               ].map((benefit, i) => (
                 <div key={i} className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-4">
                   <div className="bg-primary/20 p-3 rounded-2xl w-fit">
