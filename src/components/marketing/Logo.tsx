@@ -10,13 +10,12 @@ export const Logo = ({ className, variant = "green" }: LogoProps) => {
   const imgSrc = variant === "white" ? "/logo-white.png" : "/logo-green.png";
   
   return (
-    <div className={cn("flex items-center", className)}>
+    <div className={cn("relative flex items-center h-12 w-48", className)}>
       <Image 
         src={imgSrc} 
         alt="NEXT2YOU Care" 
-        width={60} 
-        height={60} 
-        className="object-contain"
+        fill
+        className="object-contain object-left"
         priority
       />
     </div>
