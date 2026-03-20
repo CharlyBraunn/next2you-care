@@ -1,7 +1,8 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/Button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card"
-import { CheckCircle2, Clock, ShieldCheck, Zap, Star, LayoutDashboard } from "lucide-react"
+import { CheckCircle2, Clock, ShieldCheck, Zap, Star } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -9,11 +10,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden bg-muted/30">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold tracking-wide uppercase">
-              <Star className="w-3 h-3 fill-current" />
-              Service Premium de Mobilité
-            </div>
+          <div className="space-y-8 max-w-2xl py-8">
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
               La préparation <span className="text-primary italic">haute couture</span> de votre flotte.
             </h1>
@@ -41,16 +38,19 @@ export default function LandingPage() {
               </p>
             </div>
           </div>
-          <div className="relative group">
+          <div className="relative group lg:ml-4 perspective-[2000px]">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-            <Card className="relative bg-white/90 backdrop-blur-sm border-white/50 overflow-hidden shadow-2xl rounded-[2.5rem]">
-              <div className="aspect-video bg-muted/20 flex items-center justify-center p-8">
-                 <div className="w-full h-full rounded-2xl border border-dashed border-primary/20 bg-primary/5 flex flex-col items-center justify-center gap-4 text-primary/40">
-                    <LayoutDashboard className="w-16 h-16" />
-                    <p className="font-semibold text-lg">Aperçu Dashboard</p>
-                 </div>
+            <div className="relative bg-white/90 backdrop-blur-sm border border-white/50 overflow-hidden shadow-2xl rounded-[2.5rem] p-2 rotate-y-[-10deg] rotate-x-[5deg] group-hover:rotate-0 transition-transform duration-700 ease-out">
+              <div className="relative aspect-[16/10] w-full rounded-[2rem] overflow-hidden border border-border/50 shadow-inner">
+                 <Image 
+                   src="/hero-dashboard.png" 
+                   alt="Aperçu du Dashboard NEXT2YOU Care" 
+                   fill 
+                   className="object-cover object-top"
+                   priority
+                 />
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
