@@ -112,7 +112,7 @@ export const Navbar = () => {
               className={cn(
                 "hidden md:inline-flex rounded-full px-6 font-bold transition-all hover:scale-105 active:scale-95 border-none",
                 isOverHero && !isMobileMenuOpen 
-                  ? "bg-white text-primary hover:bg-white/90 shadow-none text-brand-green" 
+                  ? "bg-white text-[#0A2E1A] hover:bg-white/90 shadow-none" 
                   : "bg-[#14C774] text-white hover:bg-[#26D885] shadow-md"
               )} 
               asChild

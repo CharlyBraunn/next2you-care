@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
-import { ShieldCheck, Zap } from "lucide-react"
+import { ShieldCheck, Zap, Cog } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -8,9 +8,9 @@ export default function LandingPage() {
       {/* Transverse Hero Section */}
       <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#0A2E1A] text-white">
         <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white mb-8 backdrop-blur-md">
-            <span className="flex h-2 w-2 rounded-full bg-[#26D885] animate-ping"></span>
-            Plateforme d&apos;entretien n°1
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white mb-8 backdrop-blur-md">
+            <Cog className="w-4 h-4 text-[#26D885] animate-[spin_3s_linear_infinite]" />
+            Partenaire auto-partage n°1
           </div>
           
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] max-w-4xl text-balance">
