@@ -27,7 +27,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.q) { cal.q = []; } p(cal, ar); }; let js = d.createElement("script"); js.async = true; js.src = "https://app.cal.com/embed/embed.js"; d.head.appendChild(js); C.Cal("init", { origin: "https://app.cal.com" }); C.Cal("ui", { theme: "light", styles: { branding: { brandColor: "#14C774" } }, hideEventTypeDetails: false, layout: "month_view" }); })(window, "Cal");
+        ` }} />
+      </body>
     </html>
   );
 }

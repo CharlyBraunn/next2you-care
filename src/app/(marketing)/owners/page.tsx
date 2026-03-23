@@ -17,7 +17,7 @@ export default function OwnersPage() {
           </p>
           <div className="pt-8 flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-[#14C774] text-white hover:bg-[#26D885] border-none shadow-[0_0_30px_rgba(20,199,116,0.3)]" asChild>
-              <Link href="/signup">Essayer gratuitement</Link>
+              <Link href="/signup">Je m’inscris</Link>
             </Button>
             <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-white/20 hover:bg-white/10 text-white bg-transparent" asChild>
               <Link href="/pricing">Voir les tarifs</Link>
@@ -39,28 +39,42 @@ export default function OwnersPage() {
                     <div className="w-20 h-2 bg-slate-300 rounded-full"></div>
                     <div className="w-4 h-4 bg-primary/20 rounded-full"></div>
                   </div>
-                  <div className="space-y-2 pt-2">
-                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Configuration Mission</div>
-                    <div className="flex gap-2">
-                      <div className="flex-1 h-12 bg-primary/10 rounded-xl border border-primary/20 flex flex-col justify-center items-center p-2">
-                        <div className="w-4 h-4 rounded bg-primary/20 mb-1"></div>
-                        <div className="w-8 h-1 bg-primary/40 rounded-full"></div>
+                  <div className="space-y-3 pt-2">
+                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Services sélectionnés</div>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between p-2 bg-primary/5 border border-primary/10 rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 bg-primary/10 rounded flex items-center justify-center">
+                            <CheckCircle className="w-3 h-3 text-primary" />
+                          </div>
+                          <span className="text-[10px] font-semibold text-slate-700">Nettoyage</span>
+                        </div>
+                        <div className="w-6 h-3 bg-primary rounded-full relative"><div className="absolute right-0.5 top-0.5 w-2 h-2 bg-white rounded-full"></div></div>
                       </div>
-                      <div className="flex-1 h-12 bg-muted rounded-xl border border-border flex flex-col justify-center items-center p-2">
-                        <div className="w-4 h-4 rounded bg-slate-200 mb-1"></div>
-                        <div className="w-8 h-1 bg-slate-300 rounded-full"></div>
+                      <div className="flex items-center justify-between p-2 bg-primary/5 border border-primary/10 rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 bg-primary/10 rounded flex items-center justify-center">
+                            <CheckCircle className="w-3 h-3 text-primary" />
+                          </div>
+                          <span className="text-[10px] font-semibold text-slate-700">Plein Carburant</span>
+                        </div>
+                        <div className="w-6 h-3 bg-primary rounded-full relative"><div className="absolute right-0.5 top-0.5 w-2 h-2 bg-white rounded-full"></div></div>
                       </div>
-                      <div className="flex-1 h-12 bg-muted rounded-xl border border-border flex flex-col justify-center items-center p-2">
-                        <div className="w-4 h-4 rounded bg-slate-200 mb-1"></div>
-                        <div className="w-8 h-1 bg-slate-300 rounded-full"></div>
+                      <div className="flex items-center justify-between p-2 bg-slate-50 border border-slate-100 rounded-lg opacity-60">
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 bg-slate-200 rounded flex items-center justify-center">
+                          </div>
+                          <span className="text-[10px] font-semibold text-slate-400">Rapatriement</span>
+                        </div>
+                        <div className="w-6 h-3 bg-slate-200 rounded-full relative"><div className="absolute left-0.5 top-0.5 w-2 h-2 bg-white rounded-full"></div></div>
                       </div>
                     </div>
                   </div>
-                  <div className="w-full h-32 bg-slate-50 rounded-xl border border-border flex flex-col p-4 gap-2">
+                  <div className="w-full h-24 bg-slate-50 rounded-xl border border-border flex flex-col p-4 gap-2">
                     <div className="w-full h-3 bg-slate-200 rounded-full"></div>
                     <div className="w-3/4 h-3 bg-slate-100 rounded-full"></div>
-                    <div className="mt-auto w-full h-10 bg-primary rounded-xl flex items-center justify-center">
-                      <div className="w-20 h-2 bg-white/30 rounded-full"></div>
+                    <div className="mt-auto w-full h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                      <div className="w-20 h-2 bg-white rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -85,22 +99,27 @@ export default function OwnersPage() {
               
               <div className="relative z-10 w-full aspect-[9/16] max-w-[280px] bg-white rounded-[2.5rem] shadow-2xl border-8 border-slate-900 overflow-hidden flex flex-col p-4 group-hover:-rotate-3 transition-transform duration-700">
                 <div className="w-16 h-1 bg-slate-200 rounded-full mx-auto mb-6"></div>
-                <div className="flex-1 bg-slate-100 rounded-xl relative overflow-hidden flex flex-col">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
-                  <div className="absolute top-4 left-4 w-12 h-12 rounded-full border-4 border-white/50 flex items-center justify-center">
+                <div className="flex-1 bg-slate-100 rounded-xl relative overflow-hidden flex flex-col group/img">
+                  <div className="absolute inset-0 bg-cover bg-center transition-transform group-hover/img:scale-110" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80')` }}></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4 w-12 h-12 rounded-full border-4 border-white/50 flex items-center justify-center backdrop-blur-sm">
                     <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
                   </div>
                   <div className="mt-auto p-4 space-y-2 relative z-10">
-                    <div className="w-20 h-2 bg-white/80 rounded-full"></div>
-                    <div className="w-full h-1 bg-white/40 rounded-full overflow-hidden">
-                      <div className="w-2/3 h-full bg-primary"></div>
+                    <div className="text-[10px] font-bold text-white uppercase tracking-wider mb-1">Peugeot 208 • DE643DS</div>
+                    <div className="flex justify-between items-center text-[8px] text-white/70">
+                      <span>23 Mars 2026</span>
+                      <span className="bg-primary/80 border border-primary/20 px-1.5 py-0.5 rounded uppercase">Certifié</span>
+                    </div>
+                    <div className="w-full h-1 bg-white/30 rounded-full overflow-hidden">
+                      <div className="w-full h-full bg-primary animate-[shimmer_2s_infinite]"></div>
                     </div>
                   </div>
                 </div>
                 <div className="h-16 mt-4 grid grid-cols-3 gap-2">
-                  <div className="rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center"><div className="w-4 h-4 rounded bg-slate-300"></div></div>
-                  <div className="rounded-lg bg-slate-900 flex items-center justify-center shadow-lg"><div className="w-6 h-6 rounded-full bg-primary/40 flex items-center justify-center"><div className="w-2 h-2 rounded-full bg-primary"></div></div></div>
-                  <div className="rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center"><div className="w-4 h-4 rounded bg-slate-300"></div></div>
+                  <div className="rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center"><div className="w-4 h-4 rounded bg-slate-200"></div></div>
+                  <div className="rounded-lg bg-slate-900 flex items-center justify-center shadow-lg"><div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center p-1"><CheckCircle className="w-4 h-4 text-primary" /></div></div>
+                  <div className="rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center"><div className="w-4 h-4 rounded bg-slate-200"></div></div>
                 </div>
               </div>
             </div>
@@ -123,7 +142,7 @@ export default function OwnersPage() {
         <div className="container mx-auto px-6">
           <Card className="bg-[#14C774] text-white p-12 rounded-[2.5rem] flex flex-col items-center text-center space-y-8 border-none shadow-2xl overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-            <h2 className="text-3xl md:text-5xl font-bold max-w-2xl relative z-10">Prêt à optimiser votre temps ?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold relative z-10 whitespace-nowrap">Prêt à optimiser votre temps ?</h2>
             <p className="text-white/80 max-w-xl text-lg relative z-10">Rejoignez les loueurs qui font confiance à NEXT2YOU Care pour la gestion de leur flotte.</p>
             <Button variant="secondary" size="lg" className="bg-white text-[#14C774] hover:bg-white/90 rounded-full h-14 px-10 text-lg font-bold relative z-10" asChild>
               <Link href="/signup">Demander une démo</Link>

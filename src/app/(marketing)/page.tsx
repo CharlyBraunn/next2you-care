@@ -9,7 +9,13 @@ export default function LandingPage() {
       <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#0A2E1A] text-white">
         <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white mb-8 backdrop-blur-md">
-            <Cog className="w-4 h-4 text-[#26D885] animate-[spin_3s_linear_infinite]" />
+            <div className="w-5 h-5 text-[#26D885] animate-[spin_4s_linear_infinite]">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="4" />
+                <circle cx="50" cy="50" r="12" stroke="currentColor" strokeWidth="2" />
+                <path d="M50 15V38M50 62V85M15 50H38M62 50H85M25 25L41 41M59 59L75 75M25 75L41 59M59 41L75 25" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+              </svg>
+            </div>
             Partenaire auto-partage n°1
           </div>
           
