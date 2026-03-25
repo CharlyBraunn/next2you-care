@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
-import { Wallet, CheckCircle, TrendingUp, MapPin, Clock } from "lucide-react"
+import { CheckCircle, TrendingUp, MapPin, Clock } from "lucide-react"
 
 export default function ProvidersPage() {
   return (
@@ -9,10 +9,9 @@ export default function ProvidersPage() {
       {/* ── HERO ── */}
       <section id="hero" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#0A2E1A] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#26D885_0,transparent_50%)] opacity-20" />
-        <div className="container mx-auto px-6 max-w-4xl text-center space-y-6 relative z-10">
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
-            Intervenez sur des véhicules<br />
-            <span className="text-[#26D885] italic">d&apos;autopartage près de chez vous.</span>
+        <div className="container mx-auto px-6 max-w-5xl text-center space-y-6 relative z-10">
+          <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            Intervenez sur des véhicules d&apos;autopartage près de chez vous.
           </h1>
           <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             Pas de patron, pas d&apos;horaires fixes. Inscription 100% gratuite.
@@ -37,13 +36,11 @@ export default function ProvidersPage() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-[#26D885]/15 rounded-full blur-[80px] animate-pulse" />
 
               <div className="relative z-10 w-full max-w-xs flex flex-col gap-4">
-                {/* header */}
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-white/60 text-xs font-bold uppercase tracking-widest">Simulation mensuelle</span>
                   <TrendingUp className="w-4 h-4 text-primary" />
                 </div>
 
-                {/* mission rows */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10">
                     <div>
@@ -68,10 +65,9 @@ export default function ProvidersPage() {
                   </div>
                 </div>
 
-                {/* total */}
                 <div className="flex items-center justify-between p-5 rounded-2xl bg-gradient-to-r from-[#14C774] to-[#26D885] shadow-lg shadow-primary/30 mt-2">
                   <div>
-                    <div className="text-white/70 text-xs mb-0.5">Votre gain net estimé</div>
+                    <div className="text-white/70 text-xs mb-0.5">Votre gain estimé</div>
                     <div className="text-white font-extrabold text-lg">10 missions / mois</div>
                   </div>
                   <span className="text-white font-black text-3xl">297€</span>
@@ -83,7 +79,7 @@ export default function ProvidersPage() {
             <div className="space-y-6">
               <h2 className="text-4xl font-bold leading-tight">Notre modèle.</h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Nous prélevons une <span className="text-foreground font-bold">commission fixe de 10%</span> par mission, et c&apos;est tout. Le reste est pour vous. Pourquoi ? Parce que votre travail a de la valeur, et nous le respectons.
+                Nous prélevons une <span className="text-foreground font-bold">commission fixe de 10% par mission</span>, et c&apos;est tout. Le reste est pour vous.
               </p>
               <ul className="space-y-4 pt-4">
                 <li className="flex items-center gap-4 text-lg">
@@ -110,7 +106,7 @@ export default function ProvidersPage() {
               <h2 className="text-4xl font-bold leading-tight">Ne travaillez que quand vous le décidez.</h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Ouvrez l&apos;application, repérez les véhicules autour de vous, acceptez la mission.{" "}
-                <span className="text-foreground font-bold">Vos missions, votre rythme.</span>
+                <span className="text-foreground font-bold">Vos prestations, votre rythme.</span>
               </p>
               <ul className="space-y-4 pt-4">
                 <li className="flex items-center gap-4 text-lg">
@@ -130,12 +126,9 @@ export default function ProvidersPage() {
 
             {/* Visual: map mockup */}
             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl bg-gradient-to-br from-slate-100 to-slate-200 p-8 flex items-center justify-center group order-1 lg:order-2">
-
-              {/* map grid background */}
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#0000000A_1px,transparent_1px),linear-gradient(to_bottom,#0000000A_1px,transparent_1px)] bg-[size:32px_32px]" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,#14C77420_0,transparent_60%)]" />
 
-              {/* Fake map roads */}
               <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 400 400" fill="none">
                 <path d="M0 200 Q100 180 200 200 T400 200" stroke="#94a3b8" strokeWidth="6" />
                 <path d="M200 0 Q220 100 200 200 T200 400" stroke="#94a3b8" strokeWidth="6" />
@@ -144,21 +137,14 @@ export default function ProvidersPage() {
               </svg>
 
               <div className="relative z-10 w-full h-full flex items-center justify-center">
-
-                {/* Mission pins */}
                 {[
-                  { top: "30%", left: "25%", label: "Peugeot 208", status: "available", delay: "0s" },
-                  { top: "55%", left: "60%", label: "Citroën C3", status: "available", delay: "0.3s" },
-                  { top: "20%", left: "65%", label: "Renault Zoe", status: "taken", delay: "0.6s" },
-                  { top: "70%", left: "35%", label: "Toyota Yaris", status: "available", delay: "0.9s" },
+                  { top: "30%", left: "25%", label: "Peugeot 208", status: "available" },
+                  { top: "55%", left: "60%", label: "Citroën C3", status: "available" },
+                  { top: "20%", left: "65%", label: "Renault Zoé", status: "taken" },
+                  { top: "70%", left: "35%", label: "Toyota Yaris", status: "available" },
                 ].map((pin, i) => (
-                  <div
-                    key={i}
-                    className="absolute group/pin cursor-pointer"
-                    style={{ top: pin.top, left: pin.left }}
-                  >
-                    <div className={`relative w-10 h-10 rounded-full border-4 border-white shadow-xl flex items-center justify-center transition-transform group-hover/pin:scale-125 ${pin.status === "available" ? "bg-[#14C774]" : "bg-slate-400"}`}
-                      style={{ animationDelay: pin.delay }}>
+                  <div key={i} className="absolute group/pin cursor-pointer" style={{ top: pin.top, left: pin.left }}>
+                    <div className={`relative w-10 h-10 rounded-full border-4 border-white shadow-xl flex items-center justify-center transition-transform group-hover/pin:scale-125 ${pin.status === "available" ? "bg-[#14C774]" : "bg-slate-400"}`}>
                       <MapPin className="w-4 h-4 text-white" />
                       {pin.status === "available" && (
                         <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#14C774] rounded-full border border-white animate-ping opacity-75" />
@@ -170,14 +156,12 @@ export default function ProvidersPage() {
                   </div>
                 ))}
 
-                {/* User location */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div className="w-5 h-5 bg-blue-500 rounded-full border-4 border-white shadow-xl">
                     <div className="absolute inset-0 bg-blue-500 rounded-full animate-ping opacity-40" />
                   </div>
                 </div>
 
-                {/* Legend bottom */}
                 <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-white flex items-center gap-4">
                   <Clock className="w-5 h-5 text-primary shrink-0" />
                   <div>
@@ -199,14 +183,14 @@ export default function ProvidersPage() {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-16 -mb-16" />
 
             <div className="relative z-10">
-              <div className="text-center mb-16 space-y-4">
+              <div className="text-center mb-14 space-y-3">
                 <h2 className="text-4xl md:text-5xl font-extrabold">Prêt à gagner plus ?</h2>
                 <p className="text-white/70 text-lg max-w-xl mx-auto">
                   3 étapes pour commencer à recevoir vos premières missions.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
                 {[
                   {
                     num: "1",
@@ -224,12 +208,12 @@ export default function ProvidersPage() {
                     desc: "Commencez à recevoir des demandes immédiatement."
                   }
                 ].map((step, i) => (
-                  <div key={i} className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center">
+                  <div key={i} className="flex flex-col items-center text-center gap-4 p-8 rounded-2xl bg-white border border-white/20 hover:shadow-xl transition-shadow">
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                       <span className="text-primary font-black text-2xl">{step.num}</span>
                     </div>
-                    <h4 className="font-extrabold text-lg text-white">{step.title}</h4>
-                    <p className="text-white/60 text-sm leading-relaxed">{step.desc}</p>
+                    <h4 className="font-extrabold text-lg text-slate-900">{step.title}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 ))}
               </div>

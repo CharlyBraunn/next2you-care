@@ -26,7 +26,6 @@ export default function PricingPage() {
         "Jusqu'à 10 véhicules",
         "Missions prioritaires",
         "Tableau de bord avancé",
-        "Rapport mensuel de flotte",
       ],
       cta: "Essayer gratuitement",
       highlight: true,
@@ -38,9 +37,7 @@ export default function PricingPage() {
       features: [
         "Véhicules illimités",
         "Support prioritaire 7j/7",
-        "Dashboard multi-flottes centralisé",
         "Facturation mensuelle consolidée",
-        "Prestataires attitrés à votre flotte",
         "Rapport de sinistralité mensuel",
       ],
       cta: "Contacter un expert",
