@@ -20,7 +20,7 @@ export default function LandingPage() {
           </div>
           
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] max-w-4xl text-balance">
-            L&apos;entretien de véhicules partagés, simplifié.
+            L&apos;entretien des véhicules partagés, simplifié.
           </h1>
           
           <p className="mt-8 text-xl text-white/80 leading-relaxed max-w-2xl text-balance">
@@ -31,7 +31,7 @@ export default function LandingPage() {
             <Button size="lg" className="text-lg px-8 h-14 rounded-full shadow-[0_0_30px_rgba(20,199,116,0.3)] hover:shadow-[0_0_40px_rgba(20,199,116,0.5)] transition-all bg-[#14C774] text-white hover:bg-[#26D885] border-none" asChild>
               <Link href="/owners">Je suis Loueur</Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 h-14 rounded-full border-white/20 hover:bg-white/10 text-white transition-all bg-transparent" asChild>
+            <Button size="lg" variant="outline" className="text-lg px-8 h-14 rounded-full border-white/20 hover:bg-white hover:text-[#0A2E1A] text-white transition-all bg-transparent" asChild>
               <Link href="/providers">Je suis Prestataire</Link>
             </Button>
           </div>
@@ -58,7 +58,7 @@ export default function LandingPage() {
                  Ne perdez plus votre temps entre vos locations. Déléguez la préparation de vos véhicules à des experts et concentrez-vous sur votre développement.
                </p>
                <Button variant="outline" className="mt-auto rounded-full px-8 h-12 text-base font-semibold group-hover:bg-primary group-hover:text-white transition-colors" asChild>
-                 <Link href="/owners">C&apos;est parti</Link>
+                 <Link href="/onboarding/client">C&apos;est parti</Link>
                </Button>
             </div>
             
@@ -72,8 +72,8 @@ export default function LandingPage() {
                <p className="text-white/70 text-lg mb-8 text-balance">
                  Générez des revenus sur votre temps libre en préparant des véhicules près de chez vous. Vos règles, votre rythme, en toute simplicité.
                </p>
-               <Button className="mt-auto rounded-full px-8 h-12 text-base font-semibold bg-accent text-accent-foreground hover:bg-accent/90 transition-colors" asChild>
-                 <Link href="/providers">Je m&apos;inscris</Link>
+               <Button className="mt-auto rounded-full px-8 h-12 text-base font-semibold bg-accent text-accent-foreground hover:bg-white hover:text-[#0F172A] transition-colors" asChild>
+                 <Link href="/onboarding/provider">Je m&apos;inscris</Link>
                </Button>
             </div>
           </div>
