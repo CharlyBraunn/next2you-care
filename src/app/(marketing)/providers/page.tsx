@@ -11,7 +11,7 @@ export default function ProvidersPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#26D885_0,transparent_50%)] opacity-20" />
         <div className="container mx-auto px-6 max-w-5xl text-center space-y-6 relative z-10">
           <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-            Intervenez sur des véhicules d&apos;autopartage près de chez vous.
+            Intervenez sur des véhicules près de chez vous.
           </h1>
           <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             Pas de patron, pas d&apos;horaires fixes. Inscription 100% gratuite.
