@@ -110,7 +110,7 @@ export default function OwnersPage() {
                 <div className="flex-1 relative overflow-hidden mx-3 rounded-2xl">
                   <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600')` }}
+                    style={{ backgroundImage: `url('/images/peugeot/peugeot-5.jpg')` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -145,12 +145,12 @@ export default function OwnersPage() {
                 {/* Photo thumbnails */}
                 <div className="px-3 py-2 grid grid-cols-3 gap-1.5">
                   {[
-                    { bg: "#d1fae5", done: true },
-                    { bg: "#d1fae5", done: true },
-                    { bg: "#d1fae5", done: true },
-                  ].map((thumb, i) => (
+                    "/images/peugeot/peugeot-2.png",
+                    "/images/peugeot/peugeot-3.png",
+                    "/images/peugeot/peugeot-4.png"
+                  ].map((imgUrl, i) => (
                     <div key={i} className="h-10 rounded-lg overflow-hidden relative border-2 border-primary/30">
-                      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=100')`, filter: "brightness(0.7)" }} />
+                      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${imgUrl}')`, filter: "brightness(0.7)" }} />
                       <div className="absolute bottom-0.5 right-0.5">
                         <CheckCircle className="w-3 h-3 text-primary drop-shadow" />
                       </div>
