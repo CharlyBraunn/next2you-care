@@ -1,15 +1,37 @@
+'use client'
+
+import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
-import { Label } from "@/components/ui/Label" // Assuming I'll create it soon or use standard label
 
 export default function LoginPage() {
+  const [role, setRole] = useState<'owner' | 'provider'>('owner')
+
   return (
     <div className="space-y-6">
       <div className="space-y-2">
         <h1 className="text-3xl font-extrabold tracking-tight">Bon retour parmi nous.</h1>
-        <p className="text-muted-foreground">Connectez-vous pour gérer vos missions et votre flotte.</p>
+        <p className="text-muted-foreground">Connectez-vous pour gérer vos missions et votre {role === 'owner' ? 'flotte' : 'activité'}.</p>
       </div>
+
+      <div className="flex p-1 bg-slate-100 rounded-lg">
+        <button
+          type="button"
+          onClick={() => setRole('owner')}
+          className={`flex-1 py-2.5 text-sm font-bold rounded-md transition-all ${role === 'owner' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'}`}
+        >
+          Loueur
+        </button>
+        <button
+          type="button"
+          onClick={() => setRole('provider')}
+          className={`flex-1 py-2.5 text-sm font-bold rounded-md transition-all ${role === 'provider' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'}`}
+        >
+          Prestataire
+        </button>
+      </div>
+
       <form className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-semibold">Email</label>

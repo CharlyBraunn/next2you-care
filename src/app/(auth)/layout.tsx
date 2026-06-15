@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Logo } from "@/components/marketing/Logo"
 import { CheckCircle, Star } from "lucide-react"
+import { RealtimeMissionCounter } from "@/components/auth/RealtimeMissionCounter"
 
 export default function AuthLayout({
   children,
@@ -23,76 +24,31 @@ export default function AuthLayout({
       </div>
 
       {/* Right — conversion panel */}
-      <div className="hidden lg:flex bg-[#0A2E1A] flex-col justify-between text-white relative overflow-hidden p-14">
+      <div className="hidden lg:flex bg-[#0A2E1A] flex-col justify-center items-center text-white relative overflow-hidden p-14 text-center">
         {/* Background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#26D885_0,transparent_55%)] opacity-15" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
-
-        {/* Top logo area */}
-        <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-white/80 backdrop-blur-sm">
-            <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Plateforme 100% française
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#26D885_0,transparent_55%)] opacity-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]" />
 
         {/* Main content */}
-        <div className="relative z-10 space-y-10">
+        <div className="relative z-10 space-y-12 max-w-lg w-full">
+          
           <div className="space-y-6">
-            <h2 className="text-3xl font-extrabold leading-tight">
-              La plateforme qui redéfinit la préparation de vos véhicules.
-            </h2>
-
-            {/* Dual value props */}
-            <div className="grid grid-cols-1 gap-4">
-              {/* For owners */}
-              <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center">
-                    <span className="text-primary text-xs font-black">L</span>
-                  </div>
-                  <span className="text-sm font-bold text-white/90">Pour les Loueurs</span>
-                </div>
-                <ul className="space-y-2">
-                  {[
-                    "Véhicule prêt à relouer en moins d'1h",
-                    "Preuves photos à chaque mission",
-                    "0 déplacement, 0 stress",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-white/70">
-                      <CheckCircle className="w-4 h-4 text-primary shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* For providers */}
-              <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
-                    <span className="text-white/80 text-xs font-black">P</span>
-                  </div>
-                  <span className="text-sm font-bold text-white/90">Pour les Prestataires</span>
-                </div>
-                <ul className="space-y-2">
-                  {[
-                    "Missions flexibles, près de chez vous",
-                    "Paiements rapides et garantis",
-                    "Inscrivez-vous gratuitement en 5 min",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-white/70">
-                      <CheckCircle className="w-4 h-4 text-white/40 shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-white/80 backdrop-blur-sm mx-auto">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              Plateforme 100% française
             </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold leading-[1.1] tracking-tight">
+              Le réseau <span className="text-[#26D885]">NEXT2YOU Care</span>
+            </h2>
+            <p className="text-lg text-white/70">
+              La plateforme qui redéfinit l&apos;entretien de vos véhicules partagés.
+            </p>
           </div>
 
+          <RealtimeMissionCounter />
+
           {/* Testimonial */}
-          <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4">
+          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-4 text-left">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 text-primary fill-primary" />
@@ -101,8 +57,8 @@ export default function AuthLayout({
             <p className="text-sm text-white/80 leading-relaxed italic">
               &ldquo;Depuis que nous utilisons NEXT2YOU Care, nous avons réduit notre temps de préparation de 40%.&rdquo;
             </p>
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-primary/30 border border-primary/40 flex items-center justify-center text-sm font-black text-primary">
+            <div className="flex items-center gap-3 pt-2">
+              <div className="w-10 h-10 rounded-full bg-primary/30 border border-primary/40 flex items-center justify-center text-sm font-black text-primary">
                 ML
               </div>
               <div>
