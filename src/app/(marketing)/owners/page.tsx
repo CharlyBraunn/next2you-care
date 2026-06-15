@@ -169,11 +169,11 @@ export default function OwnersPage() {
 
             <div className="space-y-6 order-2 lg:order-1">
               <h2 className="text-4xl font-bold">Zéro stress, tout est tracé.</h2>
-              <p className="text-xl text-muted-foreground">Notre plateforme sécurise chaque étape de l&apos;intervention. Vous n&apos;avez pas besoin d&apos;être sur place : donnez simplement un <span className="text-foreground font-bold">accès sécurisé à vos véhicules via une adresse mail</span>. L&apos;intervention de chaque prestataire est encadrée par des contrats stricts, et vous disposez d&apos;une preuve photo certifiée avant et après la mission.</p>
+              <p className="text-xl text-muted-foreground">Notre plateforme sécurise chaque étape de l&apos;intervention. Les accès à vos véhicules se font à distance de manière totalement sécurisée. L&apos;intervention de chaque prestataire est encadrée par des contrats stricts, et vous disposez de preuves photo certifiées avant et après chaque mission.</p>
               <ul className="space-y-4 pt-4">
                 <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6 shrink-0" /> Gardez un œil sur vos véhicules grâce à l&apos;inspection visuelle incluse</li>
                 <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6 shrink-0" /> Améliorez la gestion de vos sinistres</li>
-                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6 shrink-0" /> Des prestataires sélectionnés avec soin</li>
+                <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6 shrink-0" /> Plus besoin de vous déplacer entre vos locations</li>
               </ul>
             </div>
           </div>
