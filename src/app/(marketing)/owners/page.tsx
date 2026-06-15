@@ -19,7 +19,7 @@ export default function OwnersPage() {
             <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-[#14C774] text-white hover:bg-[#26D885] border-none shadow-[0_0_30px_rgba(20,199,116,0.3)]" asChild>
               <Link href="/signup">Je m&apos;inscris</Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-white/20 hover:bg-white/10 text-white bg-transparent" asChild>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-white/20 hover:bg-white hover:text-[#0A2E1A] text-white bg-transparent transition-colors" asChild>
               <Link href="/pricing">Voir les tarifs</Link>
             </Button>
           </div>
@@ -169,7 +169,7 @@ export default function OwnersPage() {
 
             <div className="space-y-6 order-2 lg:order-1">
               <h2 className="text-4xl font-bold">Zéro stress, tout est tracé.</h2>
-              <p className="text-xl text-muted-foreground">Notre plateforme sécurise chaque étape. Vous disposez d&apos;une <span className="text-foreground font-bold">preuve photo certifiée</span> avant et après l&apos;intervention du prestataire.</p>
+              <p className="text-xl text-muted-foreground">Notre plateforme sécurise chaque étape de l&apos;intervention. Vous n&apos;avez pas besoin d&apos;être sur place : donnez simplement un <span className="text-foreground font-bold">accès sécurisé à vos véhicules via une adresse mail</span>. L&apos;intervention de chaque prestataire est encadrée par des contrats stricts, et vous disposez d&apos;une preuve photo certifiée avant et après la mission.</p>
               <ul className="space-y-4 pt-4">
                 <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6 shrink-0" /> Gardez un œil sur vos véhicules grâce à l&apos;inspection visuelle incluse</li>
                 <li className="flex items-center gap-4 text-lg"><CheckCircle className="text-primary w-6 h-6 shrink-0" /> Améliorez la gestion de vos sinistres</li>
