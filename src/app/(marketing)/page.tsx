@@ -49,7 +49,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Owner Hub Card */}
             <div className="group relative rounded-3xl bg-white p-10 shadow-xl border border-border/50 hover:border-primary/50 transition-all flex flex-col items-center text-center overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-br from-[#14C774]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+               <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#14C774]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                  <ShieldCheck className="w-10 h-10 text-primary" />
                </div>
@@ -57,14 +57,14 @@ export default function LandingPage() {
                <p className="text-muted-foreground text-lg mb-8 text-balance">
                  Ne perdez plus votre temps entre vos locations. Déléguez la préparation de vos véhicules à des experts et concentrez-vous sur votre développement.
                </p>
-               <Button variant="outline" className="mt-auto rounded-full px-8 h-12 text-base font-semibold group-hover:bg-primary group-hover:text-white transition-colors" asChild>
+               <Button variant="outline" className="mt-auto relative z-10 rounded-full px-8 h-12 text-base font-semibold group-hover:bg-primary group-hover:text-white transition-colors" asChild>
                  <Link href="/onboarding/client">C&apos;est parti</Link>
                </Button>
             </div>
             
             {/* Provider Hub Card */}
             <div className="group relative rounded-3xl bg-[#0F172A] p-10 shadow-xl border border-border/50 hover:border-accent/50 transition-all flex flex-col items-center text-center overflow-hidden text-white">
-               <div className="absolute inset-0 bg-gradient-to-br from-[#26D885]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+               <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#26D885]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
                  <Zap className="w-10 h-10 text-accent" />
                </div>
@@ -72,7 +72,7 @@ export default function LandingPage() {
                <p className="text-white/70 text-lg mb-8 text-balance">
                  Générez des revenus sur votre temps libre en préparant des véhicules près de chez vous. Vos règles, votre rythme, en toute simplicité.
                </p>
-               <Button className="mt-auto rounded-full px-8 h-12 text-base font-semibold bg-accent text-accent-foreground hover:bg-white hover:text-[#0F172A] transition-colors" asChild>
+               <Button className="mt-auto relative z-10 rounded-full px-8 h-12 text-base font-semibold bg-accent text-accent-foreground hover:bg-white hover:text-[#0F172A] transition-colors" asChild>
                  <Link href="/onboarding/provider">Je m&apos;inscris</Link>
                </Button>
             </div>
